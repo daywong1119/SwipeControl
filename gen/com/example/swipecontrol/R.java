@@ -29,32 +29,37 @@ public final class R {
         public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
-        public static final int border=0x7f020000;
-        public static final int border_focused=0x7f020001;
-        public static final int close=0x7f020002;
-        public static final int corner=0x7f020003;
-        public static final int hide=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int maximize=0x7f020006;
-        public static final int navigation_back=0x7f020007;
-        public static final int navigation_cancel=0x7f020008;
-        public static final int navigation_forward=0x7f020009;
+        public static final int blurbg=0x7f020000;
+        public static final int border=0x7f020001;
+        public static final int border_focused=0x7f020002;
+        public static final int close=0x7f020003;
+        public static final int corner=0x7f020004;
+        public static final int hide=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int maximize=0x7f020007;
+        public static final int navigation_back=0x7f020008;
+        public static final int navigation_cancel=0x7f020009;
+        public static final int navigation_forward=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000e;
+        public static final int action_settings=0x7f0a0012;
         public static final int body=0x7f0a000a;
+        public static final int centerLine=0x7f0a000f;
         public static final int close=0x7f0a0009;
         public static final int content=0x7f0a0003;
         public static final int corner=0x7f0a000b;
         public static final int description=0x7f0a0001;
+        public static final int dummy=0x7f0a000d;
         public static final int hide=0x7f0a0007;
         public static final int icon=0x7f0a0000;
-        public static final int imageView1=0x7f0a000c;
         public static final int layout1=0x7f0a0002;
         public static final int maximize=0x7f0a0008;
+        public static final int textView01=0x7f0a0010;
+        public static final int textView02=0x7f0a000e;
         public static final int title=0x7f0a0006;
         public static final int titlebar=0x7f0a0004;
-        public static final int trigger_area=0x7f0a000d;
+        public static final int trigger_area=0x7f0a0011;
+        public static final int tv1=0x7f0a000c;
         public static final int window_icon=0x7f0a0005;
     }
     public static final class layout {

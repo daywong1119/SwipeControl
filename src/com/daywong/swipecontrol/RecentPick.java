@@ -9,7 +9,23 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class RecentApplication extends ImageView {
+public class RecentPick extends ImageView {
+	public String getPkg() {
+		return pkg;
+	}
+
+	public void setPkg(String pkg) {
+		this.pkg = pkg;
+	}
+
+	public String getCls() {
+		return cls;
+	}
+
+	public void setCls(String cls) {
+		this.cls = cls;
+	}
+
 	public float getX() {
 		return x;
 	}
@@ -54,11 +70,13 @@ public class RecentApplication extends ImageView {
 	private RelativeLayout.LayoutParams lp;
 	private ImageView iv;
 	private RelativeLayout rl;
+	private String pkg;
+	private String cls;
 
 	// private int height ;
 	// private int width;
 
-	public RecentApplication(Context context, RelativeLayout rlay, int c,
+	public RecentPick(Context context, int line, RelativeLayout rlay, int c,
 			Drawable b) {
 		super(context);
 		count = c;
@@ -71,15 +89,15 @@ public class RecentApplication extends ImageView {
 				RelativeLayout.LayoutParams.WRAP_CONTENT,
 				RelativeLayout.LayoutParams.WRAP_CONTENT);
 		x = 100 * c;
-		y = 120;
+		y = (line > 1) ? 300 : 100;
 		lp.leftMargin = (int) x;
 		lp.topMargin = (int) y;
 
 		rl.addView(iv, lp);
 	}
 
-	public RecentApplication(Context context, RelativeLayout rlay, int c,
-			Drawable b, int rx, int ry) {
+	public RecentPick(Context context, RelativeLayout rlay, int c, Drawable b,
+			int rx, int ry) {
 		super(context);
 		count = c;
 		icon = b;
@@ -128,7 +146,6 @@ public class RecentApplication extends ImageView {
 
 	public void unselect() {
 		selecting = false;
-		// iv.clearAnimation();
 	}
 
 	public void extendHitArea(int area) {
