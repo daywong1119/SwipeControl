@@ -168,11 +168,6 @@ public class TriggerWindow extends StandOutWindow {
 					return false;
 
 				case MotionEvent.ACTION_MOVE:
-					// Log.d(TAG,
-					// "ACTION_MOVE x is" + event.getX() + " y ix "
-					// + event.getY() + " hittest "
-					// + hitTest(event.getX(), event.getY()));
-
 					int s = hitTest(event.getX(), event.getY());
 					if (s < listLauncher.size()) {
 						if (lastTouch != -1 && lastTouch != s) {
@@ -198,10 +193,6 @@ public class TriggerWindow extends StandOutWindow {
 				mParams.setFocusFlag(true);
 				TriggerWindow.this.updateViewLayout(DEFAULT_ID, mParams);
 
-				RelativeLayout dummy = (RelativeLayout) frame
-						.findViewById(R.id.dummy);
-				dummy.setVisibility(RelativeLayout.VISIBLE);
-
 				TranslateAnimation ani = new TranslateAnimation(0, 0, +100, 0);
 				ani.setDuration(150);
 				frame.findViewById(R.id.trigger_area).startAnimation(ani);
@@ -214,10 +205,6 @@ public class TriggerWindow extends StandOutWindow {
 								StandOutLayoutParams.LEFT,
 								StandOutLayoutParams.CENTER));
 
-				RelativeLayout dummy = (RelativeLayout) frame
-						.findViewById(R.id.dummy);
-				dummy.setVisibility(RelativeLayout.GONE);
-
 				RelativeLayout rl = (RelativeLayout) mFrame
 						.findViewById(R.id.trigger_area);
 				rl.removeAllViews();
@@ -228,7 +215,7 @@ public class TriggerWindow extends StandOutWindow {
 	@Override
 	public StandOutLayoutParams getParams(int id, Window window) {
 		Log.d(TAG, "mParam initialized");
-		return new StandOutLayoutParams(id, 20, 200, StandOutLayoutParams.LEFT,
+		return new StandOutLayoutParams(id, 25, 25, StandOutLayoutParams.LEFT,
 				StandOutLayoutParams.CENTER);
 	}
 
